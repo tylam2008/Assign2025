@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Blog - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./styles.css">
+ </head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="Index.html">	<img src="Images/logo.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+              data-bs-toggle="dropdown" aria-expanded="false">Places</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="BJ.html">Beijing</a></li>
+              <li><a class="dropdown-item" href="London.html">London</a></li>
+              <li><a class="dropdown-item" href="Japan.html">Japan</a></li>
+              <li><a class="dropdown-item" href="Italy.html">Italy</a></li>
+              <li><a class="dropdown-item" href="HK.html">Hong Kong</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="py-3"></div>
+  
+  <!-- Carousel -->
+  <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="1000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="BJ.html">
+          <img src="./images/bj_title.webp" class="d-block w-100" alt="Beijing" loading="lazy">
+        </a>
+        <div class="carousel-caption">
+          <h2>"The real voyage of discovery consists not in seeking new landscapes but in having new eyes." — Marcel Proust</h2>
+         </div>
+      </div>
+      <div class="carousel-item">
+        <a href="London.html">
+          <img src="./images/Ld_title.jpg" class="d-block w-100" alt="London" loading="lazy">
+        </a>
+        <div class="carousel-caption">
+        <h2>"Take only memories, leave only footprints." – Chief Seattle"</h2>
+              </div>
+              </div>
+      <div class="carousel-item">
+        <a href="Japan.html">
+          <img src="./images/jp_title.jpg" class="d-block w-100" alt="Japan" loading="lazy">
+        </a>
+      <div class="carousel-caption">
+          <h2>"To Travel is to Live." – Hans Christian Andersen</h2>
+        </div>
+    </div>
+
+      <div class="carousel-item">
+          <a href="Italy.html">
+            <img src="./images/It_title.jpg" class="d-block w-100" alt="Italy" loading="lazy">
+          </a>
+          <div class="carousel-caption">
+            <h2>"The beauty of the journey is found not in the destination, but in the scenery along the way."
+              ― Nina Bennett"</h2>
+          </div>
+          </div>
+
+       <div class="carousel-item">
+            <a href="HK.html">
+              <img src="./images/hk_title.jpg" class="d-block w-100" alt="Hong Kong" loading="lazy">
+            </a>
+        <div class="carousel-caption">
+              <h2>"Jobs fill your pocket, but adventures fill your soul."" – Jamie Lyn Beatty</h2>
+            </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize carousel only once
+      const carousel = new bootstrap.Carousel('#carouselExample', {
+        interval: 4000,
+        pause: 'hover',
+        wrap: true
+      });
+
+      // Preload images with callback
+      const preloadImages = () => {
+        const images = document.querySelectorAll('.carousel-item img');
+        let loaded = 0;
+        
+        images.forEach(img => {
+          const imgObj = new Image();
+          imgObj.src = img.src;
+          imgObj.onload = () => {
+            loaded++;
+            if (loaded === images.length) {
+              document.querySelector('.carousel').classList.add('images-loaded');
+            }
+          };
+          imgObj.onerror = () => loaded++; // Count even if image fails to load
+        });
+      };
+
+      preloadImages();
+    });
+  </script>
+</body>
+</html>
+
