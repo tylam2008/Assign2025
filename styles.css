@@ -1,0 +1,412 @@
+body {
+    font-family: 'Quicksand', 'Segoe UI', sans-serif;
+    background-color: #000;
+    color: #333;
+  }
+
+  .container.my-5 > h1, p {
+    /* text-align: center; */
+    color: whitesmoke;
+    padding : 20px;
+  }
+  
+  .mt-5 {
+      color: whitesmoke;
+  }
+  
+
+  /* Carousel Container */
+  #carouselExample {
+    height: 60vh;
+    overflow: hidden;
+  }
+
+  /* Carousel Inner and Items */
+  .carousel-inner {
+    height: 100%;
+    position: relative;
+  }
+
+  .carousel-item {
+    height: 100%;
+  }
+
+  /* Carousel Images */
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Fade transition with flicker fix */
+  .carousel-fade {
+    overflow: hidden;
+  }
+
+  .carousel-fade .carousel-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: opacity;
+    z-index: 0;
+  }
+
+  .carousel-fade .carousel-item.active {
+    opacity: 1;
+    z-index: 1;
+    position: relative;
+  }
+
+  /* Prevent transitions until images load */
+  .carousel:not(.images-loaded) .carousel-item {
+    transition: none !important;
+  }
+
+  /* Caption animation */
+  .carousel-caption {
+    transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+    opacity: 0;
+    transform: translate(-50%, -30%) scale(0.95);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    /* background: rgba(0, 0, 0, 0.1); */
+    padding: 10px;
+    border-radius: 5px;
+    backface-visibility: hidden;
+  }
+
+  .carousel-item.active .carousel-caption {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .carousel-caption h3 {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  }
+
+  /* Responsive Carousel Height */
+  @media (max-width: 767px) {
+    #carouselExample { height: 50vh; }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    #carouselExample { height: 60vh; }
+  }
+  @media (min-width: 992px) {
+    #carouselExample { height: 80vh; }
+  }
+
+  /* Navbar adjustments */
+  .navbar-nav { margin-left: auto; }
+  .navbar-brand { 
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+       
+      Footer Sticky Positioning
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+  
+      /* Gallery Styles */
+     .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+      }
+      
+      .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover; 
+        min-height: 200px; 
+      }
+
+
+/* Modal Backdrop Darker */
+.modal-backdrop.show { opacity: 0.9 !important; }
+
+/* Close Button Styling */
+.btn-close.btn-close-white {
+  filter: invert(1) grayscale(100%) brightness(200%);
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 9999;
+}
+
+/* Mobile Swipe Hint */
+@media (max-width: 768px) {
+  .modal-body::after {
+    content: "↓ Swipe down to close";
+    color: rgba(255,255,255,0.7);
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+    /* new added for responsive description */
+    .video-description-container { 
+      flex-direction: column;
+    }
+      .video-column,
+      .description-column {
+        width: 100%;
+        min-width:100%
+      }
+  }
+
+
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.fade.show {
+  opacity: 0.9 !important;
+}
+
+.btn-close.btn-close-white {
+  filter: invert(1) grayscale(100%) brightness(200%);
+  position: fixed; /* Changed from absolute to fixed */
+  right: 20px;
+  top: 20px;
+  z-index: 9999;
+  opacity: 1 !important;
+}
+
+.modal-content {
+  background: transparent;
+  border: none;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+/* Ensure modal is above backdrop */
+.modal {
+  z-index: 1060;
+}
+
+
+/* Lightbox styles */
+.gallery img {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.02);
+}
+
+.modal-img {
+  max-height: 80vh;
+  width: auto;
+  max-width: 100%;
+}
+
+.modal-dialog {
+  max-width: 90%;
+}
+
+
+.video-description-container {
+  display: flex;
+  /* flex-direction:row; */
+  gap: 2rem;
+  align-items: stretch;
+  margin-bottom: 2rem;
+  flex-wrap:wrap;
+}
+.video-container {
+  flex:1;
+  min-width:300px;
+  max-width: 80%; /* Makes the video 50% of its container width */
+  margin: 0 auto; /* Centers the video */
+} 
+
+.video-column {
+  flex: 1;
+  min-width: 45%;
+}
+
+.description-column {
+  flex: 1 1;
+  min-width: 45%; /* Minimum width before stacking */
+  color: whitesmoke;
+  background-color: rgb(26, 48, 48);
+  /* text-justify: newspaper; */
+}
+
+/* .description-column {
+  flex: 1 1 45%;
+} */
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-description-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows columns to stack on small screens */
+  gap: 2rem;
+}
+
+.image-column {
+  flex: 1 1 50%; /* Flexible width, minimum 50% */
+  min-width: 300px; /* Prevent becoming too narrow */
+}
+
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+
+.contact_section {
+  width: 100%;
+  float: left;
+  padding-bottom: 90px;}
+
+  .contact_taital {
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #363636;
+    text-align: center;
+    font-weight: bold;
+}
+.email_text {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 120px;
+}
+.email-bt {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #393838;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border: 0px;
+    border: 1px solid #2b2278 !important;
+}
+.massage-bt {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #393838;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border: 0px;
+    border: 1px solid #2b2278 !important;
+}
+
+
+.footer_section {
+  width: 100%;
+  float: left;
+  background-image: url(../images/footer-bg.png);
+  height: auto;
+  padding-top: 250px;
+  background-size: 100% 100%;
+  padding-bottom: 30px;
+  background-repeat: no-repeat;
+}
+
+.input_btn_main {
+  width: 50%;
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 40px;
+  padding: 8px 0px;
+  margin: 0 auto;
+}
+
+.mail_text {
+  width: 100%;
+  float: left;
+  font-size: 18px;
+  color: #2b2c2c;
+  background-color: #ffffff;
+  height: auto;
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: 0px;
+}
+
+
+.location_main {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.call_text {
+  width: 100%;
+  float: left;
+  font-size: 16px;
+  color: #ffffff;
+  padding-top: 10px
+}
+
+.call_text a {
+  color: #ffffff;
+}
+
+.call_text a:hover {
+  color: #e27141;
+}
+
+
+.subscribe_bt {
+  float: right;
+}
+
+.subscribe_bt a {
+  width: 170px;
+  float: left;
+  font-size: 18px;
+  color: #2b2278;
+  background-color: transparent;
+  padding: 5px 0px;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.subscribe_bt a:hover {
+  color: #000;
+  background-color: transparent;
+}
