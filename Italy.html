@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Blog - Italy</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Google Font -->
+   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+   <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark stick-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Places
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="BJ.html">Bejing</a></li>
+              <li><a class="dropdown-item" href="London.html">London</a></li>
+              <li><a class="dropdown-item" href="Japan.html">Janpan</a></li>
+              <li><a class="dropdown-item" href="Italy.html">Italy</a></li>
+              <li><a class="dropdown-item" href="HK.html">HongKong</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    <h1>Welcome to Itlay</h1>
+    <div class="video-description-container">
+      <div class="video-column">
+        <div class="video-wrapper">
+          <iframe class="responsive-iframe" src="https://www.youtube.com/embed/9J7_NqgJSq8" title="Wonders of Italy | 
+          The Most Fascinating Places in Italy | Travel Video 4K" frameborder="0" allow="accelerometer; 
+          autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      
+    </div>
+    <div class="description-column">
+      <h2>Discover the Wonders of Italy</h2>
+      <p>
+        Italy, a country synonymous with art, history, and romance, has long captivated the hearts of travelers 
+        and culture enthusiasts. From its ancient ruins to its vibrant festivals, Italy offers a rich tapestry of 
+        experiences that continue to attract people from around the world. This article delves into the cultural 
+        ichness of Italy and explores the factors that make it an irresistible destination.</p>
+
+      <h3>Featured Locations:</h3>
+      <ul>
+        <li>The Colosseum (Rome): An iconic symbol of ancient Rome, this amphitheater once 
+          hosted gladiatorial contests and public spectacles.</li>
+        <li>The Leaning Tower of Pisa: A marvel of medieval architecture, this tower is famous for its unintended tilt.</li>
+        <li>Pompeii: A preserved ancient city that offers a glimpse into Roman life before the catastrophic eruption of Mount Vesuvius.</li>
+      </ul>
+      <p>Each location offers unique experiences that capture the essence of Italy culture and natural beauty.</p>
+      </div>
+      </div>
+    <!-- Gallery Section -->
+    <h2 class="mt-5">Photo Gallery</h2>
+    <div class="gallery">
+      <img src="images/it01.jpg" alt="Photo 1">
+      <img src="images/it1.jpg" alt="Photo 2">
+      <img src="images/it2.jpg" alt="Photo 3">
+      <img src="images/it3.jpg" alt="Photo 4">
+      <img src="images/it4.jpg" alt="Photo 5">
+      <img src="images/it5.jpg" alt="Photo 6">
+      <img src="images/it6.jpg" alt="Photo 1">
+      <img src="images/it7.jpg" alt="Photo 2">
+      <img src="images/it8.jpg" alt="Photo 3">
+
+      <img src="images/it9.jpg" alt="Photo 1">
+      <img src="images/it10.jpg" alt="Photo 2">
+      <img src="images/itf1.jpg" alt="Photo 3">
+      <img src="images/itf2.jpg" alt="Photo 4">
+      <img src="images/itf3.jpg" alt="Photo 5">
+      <img src="images/itf4.jpg" alt="Photo 6">
+   
+    </div>
+  
+  </main>
+
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0 bg-transparent">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center p-0">
+        <img src="" class="img-fluid" id="modalImage" style="max-height: 80vh;">
+        <div class="caption text-white mt-2"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Blog - Hong Kong</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Google Font -->
+   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+   <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark stick-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Places
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="Bj.html">Bejing</a></li>
+              <li><a class="dropdown-item" href="London.html">London</a></li>
+              <li><a class="dropdown-item" href="Japan.html">Janpan</a></li>
+              <li><a class="dropdown-item" href="Italy.html">Italy</a></li>
+              <li><a class="dropdown-item" href="HK.html">HongKong</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    <h1>Welcome to Hong Kong </h1>
+    <div class="video-description-container">
+      <div class="video-column">
+        <div class="video-wrapper">
+          <iframe class="responsive-iframe"  src="https://www.youtube.com/embed/PxPxiOrCkXs" 
+          title="TOP 24 BEST THINGS to do in HONG KONG 2023" frameborder="0" allow="accelerometer;
+           autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 
+</div>
+    </div>
+    <div class="description-column">
+      <h2>Discover the Wonders of Hong Kong</h2>
+      <p>Hong Kong is a vibrant city with a unique blend of Eastern and Western cultures, 
+        shaped by its history as a British colony and its deep Chinese roots.</p>
+      <h3>Featured Locations:</h3>
+      <ul>
+        <li>Victoria Peak (The Peak) – Offers the best panoramic views of Hong Kong’s skyline</li>
+        <li>Victoria Harbour – Famous for the Symphony of Lights show and the Star Ferry</li>
+        <li>Tian Tan Buddha (Big Buddha) – A giant bronze Buddha statue on Lantau Island, near Po Lin Monastery</li>
+        <li>Man Mo Temple – A historic temple dedicated to the gods of literature and war.</li>
+        <li>Lan Kwai Fong – The heart of Hong Kong’s nightlife with bars and clubs</li>
+      </ul>
+      <p>Each location offers unique experiences that capture the essence of Hong Kong culture and natural beauty.</p>
+      </div>
+      </div>
+    <!-- Gallery Section -->
+    <h2 class="mt-5">Photo Gallery</h2>
+    <div class="gallery">
+      <img src="images/hk1.jpg" alt="Photo 1">
+      <img src="images/hk3.jpg" alt="Photo 2">
+      <img src="images/hk4.jpg" alt="Photo 3">
+      <img src="images/hk5.jpg" alt="Photo 4">
+      <img src="images/hk6.jpg" alt="Photo 5">
+      <img src="images/hk8.webp" alt="Photo 6">
+      <img src="images/hk9.webp" alt="Photo 1">
+      <img src="images/hkfood1.jpg" alt="Photo 2">
+      <img src="images/hkfood2.jpg" alt="Photo 3">
+
+      <img src="images/hkfood3.jpg" alt="Photo 1">
+      <img src="images/hkfood4.jpg" alt="Photo 2">
+      <img src="images/hkfd1.jpg" alt="Photo 3">
+      <img src="images/hkfd3.jpg" alt="Photo 4">
+      <img src="images/hkfd8.jpg" alt="Photo 5">
+      <img src="images/hkfd5.jpg" alt="Photo 6">
+      <img src="images/hkfd6.jpg" alt="Photo 1">
+      <img src="images/hkfd7.jpg" alt="Photo 2">
+      <img src="images/hkfood5.webp" alt="Photo 3">
+    </div>
+    </div>
+  
+  </main>
+
+
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0 bg-transparent">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center p-0">
+        <img src="" class="img-fluid" id="modalImage" style="max-height: 80vh;">
+        <div class="caption text-white mt-2"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
